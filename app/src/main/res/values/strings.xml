@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IMDUMB</string>
+    <string name="home_title">Películas</string>
+    <string name="detail_title">Detalle</string>
 </resources>
