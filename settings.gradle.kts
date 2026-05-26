@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "IMDUMB"
 include(":app")
- 
+include(":domain")
+include(":data")
