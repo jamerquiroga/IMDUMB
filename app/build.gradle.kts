@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.navigation.safeargs)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -52,9 +53,15 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.facebook.shimmer)
+    implementation(libs.rxjava2)
+    implementation(libs.rxkotlin)
+    implementation(libs.rxandroid)
 
     implementation(libs.glide)
     kapt(libs.glide.compiler)
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     testImplementation(libs.junit)
 
