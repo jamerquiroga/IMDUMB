@@ -1,14 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
     namespace = "com.jquiroga.data"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -21,6 +18,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+}
+
+kotlin {
+    jvmToolchain(11)
 }
 
 dependencies {
