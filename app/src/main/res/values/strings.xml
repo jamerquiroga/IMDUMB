@@ -3,4 +3,6 @@
     <string name="home_title">Películas</string>
     <string name="detail_title">Detalle</string>
     <string name="movie_poster">Poster</string>
+    <string name="retry">Reintentar</string>
+    <string name="empty_categories">Sin categorías</string>
 </resources>
