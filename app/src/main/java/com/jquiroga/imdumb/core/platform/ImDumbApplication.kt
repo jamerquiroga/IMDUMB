@@ -1,4 +1,4 @@
-package com.jquiroga.imdumb
+package com.jquiroga.imdumb.core.platform
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
