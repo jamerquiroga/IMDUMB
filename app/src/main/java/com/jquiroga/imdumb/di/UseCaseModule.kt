@@ -1,6 +1,8 @@
 package com.jquiroga.imdumb.di
 
+import com.jquiroga.domain.repository.ConfigRepository
 import com.jquiroga.domain.repository.MovieRepository
+import com.jquiroga.domain.usecase.FetchRemoteConfigUseCase
 import com.jquiroga.domain.usecase.GetCategoriesUseCase
 import com.jquiroga.domain.usecase.GetMovieDetailUseCase
 import dagger.Module
@@ -24,5 +26,12 @@ object UseCaseModule {
         movieRepository: MovieRepository
     ): GetMovieDetailUseCase {
         return GetMovieDetailUseCase(movieRepository)
+    }
+
+    @Provides
+    fun provideFetchRemoteConfigUseCase(
+        configRepository: ConfigRepository
+    ): FetchRemoteConfigUseCase {
+        return FetchRemoteConfigUseCase(configRepository)
     }
 }
