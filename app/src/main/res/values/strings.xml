@@ -10,4 +10,10 @@
     <string name="recommend">Recomendar</string>
     <string name="movie_gallery">galería de imágenes</string>
     <string name="actor_photo">Foto del actor</string>
+    <string name="recommend_sheet_title">Recomendar esta película</string>
+    <string name="comment_hint">Escribe un comentario (opcional)</string>
+    <string name="confirm_recommend">Confirmar</string>
+    <string name="rating_format">Calificación: %1$s</string>
+    <string name="recommend_summary">Comparte tu opinión acerca de \"%1$s\" con tus amigos.</string>
+    <string name="recommend_success">Recomendaste \"%1$s\"!</string>
 </resources>

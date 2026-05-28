@@ -15,6 +15,7 @@ import com.jquiroga.imdumb.databinding.FragmentDetailBinding
 import com.jquiroga.imdumb.features.detail.adapter.ActorAdapter
 import com.jquiroga.imdumb.features.detail.adapter.ImageCarouselAdapter
 import com.jquiroga.imdumb.features.detail.model.MovieDetailUiModel
+import com.jquiroga.imdumb.features.recommend.RecommendBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import kotlin.getValue
@@ -129,6 +130,7 @@ class DetailFragment : BaseFragment(), DetailContract.View {
     }
 
     override fun openRecommendBottomSheet(detail: MovieDetailUiModel) {
-
+        RecommendBottomSheetFragment.newInstance(detail.title, detail.rating)
+            .show(parentFragmentManager, RecommendBottomSheetFragment.TAG)
     }
 }

@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="shimmer_placeholder">#D7D0D0</color>
     <color name="tab_selected">#3F51B5</color>
+    <color name="rating">#FB0303</color>
 </resources>
