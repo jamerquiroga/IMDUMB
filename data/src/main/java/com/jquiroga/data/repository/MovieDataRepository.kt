@@ -4,6 +4,7 @@ import com.jquiroga.data.datasource.remote.source.MovieRemoteDataRepository
 import com.jquiroga.data.mapper.MovieRemoteMapper
 import com.jquiroga.domain.model.MovieCategory
 import com.jquiroga.domain.model.MovieCategoryType
+import com.jquiroga.domain.model.MovieDetail
 import com.jquiroga.domain.repository.MovieRepository
 import io.reactivex.Single
 import javax.inject.Inject
@@ -45,5 +46,18 @@ class MovieDataRepository @Inject constructor(
                 )
             )
         }
+    }
+
+    override fun getMovieDetail(movieId: Int): Single<MovieDetail> {
+        return Single.just(
+            MovieDetail(
+                id = 0,
+                title = "",
+                overview = "",
+                voteAverage = 0.0,
+                imagePaths = emptyList(),
+                cast = emptyList()
+            )
+        )
     }
 }
