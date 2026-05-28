@@ -1,6 +1,6 @@
 package com.jquiroga.data.mapper
 
-import com.jquiroga.data.datasource.remote.response.MovieDto
+import com.jquiroga.data.datasource.remote.response.category.MovieDto
 import com.jquiroga.domain.model.Movie
 import javax.inject.Inject
 

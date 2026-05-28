@@ -1,10 +1,6 @@
-package com.jquiroga.data.datasource.remote.response
+package com.jquiroga.data.datasource.remote.response.category
 
 import com.google.gson.annotations.SerializedName
-
-data class MovieResponseDto(
-    @SerializedName("results") val results: List<MovieDto>
-)
 
 data class MovieDto(
     @SerializedName("id") val id: Int,

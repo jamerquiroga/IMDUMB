@@ -1,6 +1,7 @@
 package com.jquiroga.data.repository
 
 import com.jquiroga.data.datasource.remote.source.MovieRemoteDataRepository
+import com.jquiroga.data.mapper.MovieDetailRemoteMapper
 import com.jquiroga.data.mapper.MovieRemoteMapper
 import com.jquiroga.domain.model.MovieCategory
 import com.jquiroga.domain.model.MovieCategoryType
@@ -11,7 +12,8 @@ import javax.inject.Inject
 
 class MovieDataRepository @Inject constructor(
     private val movieRemoteDataRepository: MovieRemoteDataRepository,
-    private val movieRemoteMapper: MovieRemoteMapper
+    private val movieRemoteMapper: MovieRemoteMapper,
+    private val movieDetailRemoteMapper: MovieDetailRemoteMapper
 ) : MovieRepository {
 
     override fun getAllCategories(): Single<List<MovieCategory>> {
@@ -49,15 +51,12 @@ class MovieDataRepository @Inject constructor(
     }
 
     override fun getMovieDetail(movieId: Int): Single<MovieDetail> {
-        return Single.just(
-            MovieDetail(
-                id = 0,
-                title = "",
-                overview = "",
-                voteAverage = 0.0,
-                imagePaths = emptyList(),
-                cast = emptyList()
-            )
-        )
+        val detailSingle = movieRemoteDataRepository.getMovieDetail(movieId)
+        val creditsSingle = movieRemoteDataRepository.getMovieCredits(movieId)
+        val imagesSingle = movieRemoteDataRepository.getMovieImages(movieId)
+
+        return Single.zip(detailSingle, creditsSingle, imagesSingle) { detail, credits, images ->
+            movieDetailRemoteMapper.toDomain(detail, credits, images)
+        }
     }
 }
