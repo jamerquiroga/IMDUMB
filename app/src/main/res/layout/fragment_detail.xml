@@ -36,15 +36,15 @@
                 android:id="@+id/tab_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_xs"
+                android:layout_marginTop="@dimen/spacing_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_pager_images"
                 app:tabBackground="@drawable/tab_selector"
                 app:tabGravity="center"
                 app:tabIndicatorHeight="0dp"
-                app:tabMaxWidth="5dp"
-                app:tabMinWidth="5dp" />
+                app:tabPaddingEnd="10dp"
+                app:tabPaddingStart="10dp" />
 
             <TextView
                 android:id="@+id/text_title"
