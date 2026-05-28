@@ -5,4 +5,9 @@
     <string name="movie_poster">Poster</string>
     <string name="retry">Reintentar</string>
     <string name="empty_categories">Sin categorías</string>
+    <string name="overview">Resumen</string>
+    <string name="cast">Reparto</string>
+    <string name="recommend">Recomendar</string>
+    <string name="movie_gallery">galería de imágenes</string>
+    <string name="actor_photo">Foto del actor</string>
 </resources>

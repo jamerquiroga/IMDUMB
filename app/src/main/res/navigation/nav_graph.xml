@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.jquiroga.imdumb.features.detail.DetailFragment"
+        android:name="com.jquiroga.imdumb.features.detail.view.DetailFragment"
         android:label="@string/detail_title"
         tools:layout="@layout/fragment_detail">
 
