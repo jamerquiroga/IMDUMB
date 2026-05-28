@@ -1,6 +1,6 @@
 package com.jquiroga.domain.model
 
 data class MovieCategory(
-    val categoryName: String,
+    val displayName: String,
     val movies: List<Movie>
 )

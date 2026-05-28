@@ -18,7 +18,7 @@ class MovieUiMapper @Inject constructor() {
 
     fun toCategoryUiModel(category: MovieCategory): MovieCategoryUiModel =
         MovieCategoryUiModel(
-            categoryName = category.categoryName,
+            categoryName = category.displayName,
             movies = category.movies.map(::toMovieUiModel)
         )
 

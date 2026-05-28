@@ -12,7 +12,7 @@ class GetCategoriesUseCase(
         movieRepository.getAllCategories().map { pairs ->
             pairs.map { (categoryName, movies) ->
                 MovieCategory(
-                    categoryName = categoryName,
+                    displayName = categoryName,
                     movies = movies
                 )
             }
