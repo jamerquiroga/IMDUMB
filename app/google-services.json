@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "96569103837",
+    "project_id": "imdumb-4d74c",
+    "storage_bucket": "imdumb-4d74c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96569103837:android:06866beb4bf6b4746f5234",
+        "android_client_info": {
+          "package_name": "com.jquiroga.imdumb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUpVV3zQg4JLHnEcnBby0lQ_qj2_V-Yyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96569103837:android:c3f7f87c5f99a7016f5234",
+        "android_client_info": {
+          "package_name": "com.jquiroga.imdumb.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUpVV3zQg4JLHnEcnBby0lQ_qj2_V-Yyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

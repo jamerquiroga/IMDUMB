@@ -1,6 +1,8 @@
 package com.jquiroga.data.di
 
+import com.jquiroga.data.repository.ConfigDataRepository
 import com.jquiroga.data.repository.MovieDataRepository
+import com.jquiroga.domain.repository.ConfigRepository
 import com.jquiroga.domain.repository.MovieRepository
 import dagger.Binds
 import dagger.Module
@@ -15,5 +17,10 @@ abstract class DataBindsModule {
     abstract fun bindMovieRepository(
         impl: MovieDataRepository
     ): MovieRepository
+
+    @Binds
+    abstract fun bindConfigRepository(
+        impl: ConfigDataRepository
+    ): ConfigRepository
 
 }
