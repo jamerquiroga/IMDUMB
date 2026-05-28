@@ -15,4 +15,9 @@ kotlin {
 
 dependencies {
     implementation(libs.rxjava2)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.truth)
 }
