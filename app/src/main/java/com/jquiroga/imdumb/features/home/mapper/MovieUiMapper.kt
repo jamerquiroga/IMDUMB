@@ -2,6 +2,7 @@ package com.jquiroga.imdumb.features.home.mapper
 
 import com.jquiroga.domain.model.Movie
 import com.jquiroga.domain.model.MovieCategory
+import com.jquiroga.imdumb.core.utils.ImageUrlBuilder
 import com.jquiroga.imdumb.features.home.model.MovieCategoryUiModel
 import com.jquiroga.imdumb.features.home.model.MovieUiModel
 import java.util.Locale
@@ -12,7 +13,7 @@ class MovieUiMapper @Inject constructor() {
     fun toMovieUiModel(movie: Movie): MovieUiModel = MovieUiModel(
         id = movie.id,
         title = movie.title,
-        posterUrl = movie.posterPath,
+        posterUrl = ImageUrlBuilder.poster(movie.posterPath),
         rating = formatRating(movie.voteAverage)
     )
 
